@@ -108,7 +108,7 @@
     <Content Include="Views\Home\IndexNew.aspx" />
     <Content Include="Views\Home\GalleryNew.aspx" />
     <Content Include="Views\Home\Videos.aspx" />
-    <Content Include="Web.config" />
+    <None Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
