@@ -1,0 +1,69 @@
+﻿body 
+{
+    font-family: Verdana;
+    font-size:14px;
+}
+
+
+ul 
+{
+    font-size: 11px;
+}
+
+.category
+{
+    font-weight:bold;
+}
+
+h1, h2, h3, h4
+{
+    font-weight: bold;
+}
+
+h1 
+{
+    font-size: 160%;
+}
+
+h2
+{
+    font-size: 150%;
+}
+
+h3
+{
+    font-size: 140%;
+}
+
+h4 
+{
+    font-size: 130%;
+}
+
+h5
+{
+    font-size: 120%;
+}
+
+h6 
+{
+    font-size: 110%;
+}
+
+
+#divLeftBarSubtitle h6
+{
+    font-weight:normal;
+}
+
+.caption 
+{
+    font-size: 10px;
+    font-family: Verdana;
+}
+
+.story p 
+{
+    font-size:12px;
+    
+}

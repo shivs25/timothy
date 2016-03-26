@@ -1,0 +1,242 @@
+﻿body {
+}
+
+ul 
+{
+    padding:0;
+}
+
+li 
+{
+    list-style-type:none;
+    line-height: 24px;
+}
+
+a:link
+{
+    text-decoration:none;
+    color: #000;
+}
+
+a:visited
+{
+    text-decoration:none;
+    color: #000;
+}
+a:hover
+{
+    text-decoration: none;
+    color: #000;
+}
+a:active
+{
+    text-decoration: none;
+    color: #000;
+}
+
+.category
+{
+    cursor:pointer;
+}
+
+#divLeftBarTitle 
+{
+    text-align: left;
+    vertical-align:middle;
+}
+
+#divLeftBarSubtitle 
+{
+    text-align: left;
+    vertical-align:middle;
+}
+
+#divLeftBarContent 
+{
+    text-align: left;
+}
+
+#divFooter 
+{
+    text-align:center;
+    font-size:60%;
+    vertical-align:middle;
+}
+
+#divBackgroundImage 
+{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image:url('../data/default.jpg');
+}
+
+#divSingleBackgroundInfoButton 
+{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image:url('Images/info.png');
+    cursor:pointer;
+}
+
+#divDoubleBackgroundInfoButton 
+{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-image:url('Images/info.png');
+    cursor:pointer;
+}
+
+
+#divSingleBackgroundImage 
+{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#divDoubleBackgroundImageA 
+{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    
+}
+
+#divDoubleBackgroundImageB
+{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#divBackButton 
+{
+    background-image:url('Images/back.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#divNextButton 
+{
+    background-image:url('Images/forward.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.caption 
+{
+    text-align:center;
+}
+
+.navigation 
+{
+    cursor:pointer;
+    opacity:0.1;
+}
+
+.navigation:hover 
+{
+    opacity:1.0;
+}
+
+#divSingleBackgroundInfoButton 
+{
+    opacity:0.1;
+}
+
+#divSingleBackgroundInfoButton.on 
+{
+    opacity:1.0;
+}
+
+#divSingleBackgroundInfoButton:hover 
+{
+    opacity:1.0;
+}
+
+
+#divDoubleBackgroundInfoButton
+{
+    opacity:0.1;
+}
+
+#divDoubleBackgroundInfoButton.on 
+{
+    opacity:1.0;
+}
+
+#divDoubleBackgroundInfoButton:hover 
+{
+    opacity:1.0;
+}
+
+.navigation div 
+{
+    background-color: White;
+}
+
+
+/*Old Stuff*/
+#divAboutImage 
+{
+    background-image:url(Images/About.jpg);
+    background-position:center;
+    background-repeat:no-repeat;
+    background-size:contain;
+}
+
+
+#divAboutContainer 
+{
+    color:#333333;
+}
+
+.story a:link
+{
+    text-decoration:underline;
+    color: #000;
+}
+
+.story a:visited
+{
+    text-decoration:underline;
+    color: #000;
+}
+.story a:hover
+{
+    text-decoration: underline;
+    color: #000;
+}
+.story a:active
+{
+    text-decoration: underline;
+    color: #000;
+}
+
+.story p 
+{
+    text-align:center;
+    line-height:18px;
+    letter-spacing: 1px
+}
+
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) 
+{
+   #divBackgroundImage 
+    {
+
+        background-image:url('../data/default@2x.jpg');
+    }
+    
+    
+    #divAboutImage
+    {
+        background-image:url(Images/About@2x.jpg);
+    }
+}

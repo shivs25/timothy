@@ -1,0 +1,378 @@
+﻿html 
+{
+    width:100%;
+    height:100%;
+    overflow: auto;
+}
+
+body 
+{
+    margin:0;
+    padding:0;
+    min-width:1000px;
+    min-height: 700px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    margin:0;
+}
+
+.indent li
+{
+    margin-left: 20px;
+}
+
+.singleImageContainer 
+{
+    max-height: 872px;
+    max-width: 1152px;
+}
+
+#divContainer 
+{
+    position: absolute;
+    top:5px;
+    left:5px;
+    right:5px;
+    bottom:5px;
+}
+
+.fill 
+{
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+#divLeftBar 
+{
+    position:absolute;
+    top:0;
+    bottom:0;
+    width: 200px;
+    left:0;
+}
+
+#divMain 
+{
+    position:absolute;
+    top:0;
+    bottom:32px;
+    left: 210px;
+    right:0;
+}
+
+#divMainContent 
+{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    right:0;
+    bottom:0;
+}
+
+#divFooter 
+{
+    position:absolute;
+    bottom:0;
+    right:0;
+    left: 0;
+    height:16px;
+    line-height:16px;
+}
+
+#divLeftBarTitle 
+{
+    position:absolute;
+    left:5px;
+    right:0;
+    top: 32px;
+    height:32px;
+    line-height:32px;
+}
+
+#divLeftBarSubtitle 
+{
+    position:absolute;
+    left:5px;
+    right:0;
+    top: 64px;
+    height:32px;
+    line-height:32px;
+}
+
+#divLeftBarContent 
+{
+    position:absolute;
+    top:132px;
+    left:5px;
+    right:0;
+    bottom:0;
+}
+
+#divBackgroundImage 
+{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    max-width: 1024px;
+    max-height: 800px;
+}
+
+#divGalleryMainContainer
+{
+    position:absolute;
+    left:64px;
+    right:64px;
+    top:0;
+    bottom:42px;
+}
+
+#divThumbnails 
+{
+    position:absolute;
+    left:64px;
+    right:64px;
+    height:42px;
+    bottom:0;
+}
+
+#divSingleBackgroundImage 
+{
+    bottom: 104px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#divDoubleContainerA 
+{
+    position:absolute;
+    left:0;
+    width: 48%;
+    top:0;
+    bottom:0;
+    
+}
+
+#divDoubleBackgroundCaptionA 
+{
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:0;
+    height: 100px;
+    line-height: 16px; 
+    overflow:hidden;
+}
+
+.story p 
+{
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+
+#divDoubleContainerB
+{
+    position:absolute;
+    width: 48%;
+    right:0;
+    top:0;
+    bottom:0;
+    
+}
+
+#divDoubleBackgroundCaptionB
+{
+    position:absolute;
+    left:0;
+    right:0;
+    height: 100px;
+    bottom:0;
+    line-height: 16px; 
+    overflow:hidden;
+}
+
+#divDoubleBackgroundAStory 
+{
+    bottom:104px;
+}
+
+#divDoubleBackgroundBStory
+{
+    bottom:104px;
+}
+
+#divDoubleBackgroundImageA 
+{
+    bottom:104px;
+}
+
+#divDoubleBackgroundImageB
+{
+    bottom:104px;
+}
+
+#divSingleBackgroundCaption 
+{
+    position:absolute;
+    left:100px;
+    right:100px;
+    height: 100px;
+    bottom:0;
+    line-height: 16px; 
+    overflow:hidden;
+}
+
+#divSingleBackgroundInfoButton 
+{
+    position:absolute;
+    left:50%;
+    margin-left:-8px;
+    width:16px;
+    height: 16px;
+    bottom:0;
+}
+
+#divDoubleBackgroundInfoButton 
+{
+    position:absolute;
+    left:50%;
+    margin-left:-8px;
+    width:16px;
+    height: 16px;
+    bottom:0;
+}
+
+#divBackButton 
+{
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:128px;
+    width:48px;
+}
+
+#divNextButton 
+{
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:128px;
+    width:48px;
+}
+
+
+
+/*Old Stuff*/
+
+#divGallery 
+{
+    height:100%;
+    white-space:nowrap;
+    float:left;
+}
+
+#divGalleryContainer 
+{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow:auto;
+}
+
+.imageContainer 
+{
+    float:left;
+    height:580px;
+    margin-left:10px;
+    margin-right:10px;
+    display:inline;
+}
+
+.imageCaption 
+{
+    width:100%;
+    text-align:center;
+    overflow:hidden;
+    margin-top:3px;
+    color:#333333;
+}
+
+#divDescriptionContainer 
+{
+    width:300px;
+    height:100%;
+    margin-left:15px;
+    padding:0;
+    float:left;
+    white-space:normal;
+    color:#333333;
+    overflow:auto;
+}
+
+
+#divAboutContainer 
+{
+    padding:15px;
+}
+
+#divAboutImage 
+{
+    position:absolute;
+    left:0;
+    top:50px;
+    width:320px;
+    height:480px;
+    
+    
+}
+
+#divAboutTextContainer 
+{
+    position:absolute;
+    left:335px;
+    top:50px;
+    right:15px;
+    bottom:0;
+    white-space:normal;
+}
+
+#divVideoViewPort 
+{
+    height:490px;
+    position:absolute;
+    top:50%;
+    margin-top:-245px;
+    left:0;
+    right:0;
+    overflow:auto;
+}
+
+#divVideoContents 
+{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+}
+
+.videoContainer 
+{
+    float:left;
+    position:relative;
+    
+}

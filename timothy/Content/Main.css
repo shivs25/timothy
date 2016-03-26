@@ -1,0 +1,183 @@
+﻿
+
+.contentContainer 
+{
+    position:absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+li 
+{
+    list-style-type:none;
+}
+
+a:link
+{
+    text-decoration:none;
+}
+
+a:visited
+{
+    text-decoration:none;
+}
+a:hover
+{
+    text-decoration: none;
+}
+a:active
+{
+    text-decoration: none;
+}
+
+
+#divMain 
+{
+    position:absolute;
+    top:0;
+    bottom:16px;
+    left:0;
+    right:0;
+}
+
+#divFooter 
+{
+    position:absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    height:16px;
+    text-align:center;
+    font-size:10px;
+}
+
+
+#divContentContainer 
+{
+    position:absolute;
+    top:50%;
+    left:170px;
+    right:0;
+    height:616px;
+    margin-top:-308px;
+}
+
+#divSideBar 
+{
+    position:absolute;
+    left:10px;
+    width:150px;
+    top:0;
+    bottom:0;
+}
+
+#divSideBarContainer 
+{
+    position:absolute;
+    left:0;
+    right:0;
+    height:616px;
+    top:50%;
+    margin-top:-308px;
+}
+
+#divSideHeader 
+{
+    position:relative;
+    width:100%;
+    text-align:center;
+    margin-top:10px;
+    height:40px;
+    
+}
+
+#divLinksContainer 
+{
+    position:relative;
+    margin-top:20px;
+    width:100%;
+    height:auto;
+}
+
+ol, ol li
+{
+    margin:3px 0 0 5px;
+    padding:0;
+    list-style-position: inside;
+}
+
+
+#divAboutContainer 
+{
+    padding:15px;
+}
+
+#divAboutImage 
+{
+    position:absolute;
+    left:0;
+    top:50px;
+    width:320px;
+    height:480px;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#divAboutTextContainer 
+{
+    position:absolute;
+    left:335px;
+    top:50px;
+    right:15px;
+    bottom:0;
+    white-space:normal;
+}
+
+#divGallery 
+{
+    height:100%;
+    white-space:nowrap;
+    float:left;
+}
+
+#divGalleryContainer 
+{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow:auto;
+}
+
+.imageContainer 
+{
+    float:left;
+    height:580px;
+    margin-left:10px;
+    margin-right:10px;
+    display:inline;
+}
+
+.imageCaption 
+{
+    width:100%;
+    text-align:center;
+    overflow:hidden;
+    margin-top:3px;
+    color:#333333;
+}
+
+#divDescriptionContainer 
+{
+    width:300px;
+    height:100%;
+    margin-left:15px;
+    padding:0;
+    float:left;
+    white-space:normal;
+    color:#333333;
+    overflow:auto;
+}

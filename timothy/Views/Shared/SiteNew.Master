@@ -1,0 +1,107 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+
+    <link href="<%=Url.Content("~/Content/typography.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~/Content/layout.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~/Content/content.css") %>" rel="stylesheet" type="text/css" />
+    <script src="<%=Url.Content("~/Scripts/jquery-1.10.2.min.js") %>" type="text/javascript"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        $(function () {
+            var retina = window.devicePixelRatio > 1;
+            $("#hidRetina").val(retina);
+            $(".navLink a").click(function () {
+                var visibleMenus = [];
+                $(".categoryMenu").each(function (index, item) {
+
+                    if ($(item).is(":visible")) {
+                        visibleMenus.push(index);
+                    }
+                });
+
+                if (this.href.indexOf("?") > 0) {
+                    this.href = this.href + "&isRetina=" + retina + "&openMenus=" + visibleMenus.join("|");
+                }
+                else {
+                    this.href = this.href + "?isRetina=" + retina + "&openMenus=" + visibleMenus.join("|");
+                }
+            });
+
+        });
+
+        var toggleFolder = function (elt) {
+            var li = $(elt).parent();
+            var child = $(li).find("ul");
+
+            child.slideToggle();
+
+
+        };
+    </script>
+</head>
+<body class="fill">
+    <div id="divContainer">
+        <div id="divLeftBar">
+            <div id="divLeftBarTitle"><h4 class="navLink"><%: Html.ActionLink("Timothy Shivers", "Index") %></h4></div>
+            <div id="divLeftBarSubtitle"><h6>Photojournalist</h6></div>
+            <div id="divLeftBarContent">
+                <div id="divLinksContainer">
+                    <ul>
+                        <li class="navLink"><%: Html.ActionLink("Portfolio", "Portfolio", null, new { @class = "category" })%></li>
+                        <% foreach (var l in (List<timothy.Models.Link>)ViewData["Links"]) {
+                          
+                            %>
+                            <li class="indent"><span class="category" onclick="toggleFolder(this);"><%: l.Text %></span>
+                                <% if (l.IsOpen) { %>
+                                        <ul class="categoryMenu">
+                                            <% foreach(var l2 in l.Links) { %>
+                                                <li class="navLink"><%: Html.ActionLink(l2.Text, "Gallery", new { folderId = l.URL, galleryId = l2.URL, folderName = l2.Text, isDouble = l2.IsDouble }, new { title = l2.ToolTip })%></li>
+                                            <% } %>
+                                        </ul>
+                                <% } 
+                                   else { %>
+
+                                        <ul class="categoryMenu" style="display:none;">
+                                            <% foreach(var l2 in l.Links) { %>
+                                                <li class="navLink"><%: Html.ActionLink(l2.Text, "Gallery", new { folderId = l.URL, galleryId = l2.URL, folderName = l2.Text, isDouble = l2.IsDouble }, new { title = l2.ToolTip })%></li>
+                                            <% } %>
+                                        </ul>
+                                <% } %>
+                                
+                                
+                            
+                            </li>
+
+                            
+                            <%--<li class="markRetina"><%: Html.ActionLink(l.Text, "Gallery", new { galleryId = l.URL, folderName = l.Text }, new { title = l.ToolTip })%></li>--%>
+                        <% } %>
+                        <li class="navLink"><%: Html.ActionLink("Videos", "Videos", null, new { @class = "category" })%></li>
+                        <li class="navLink"><%: Html.ActionLink("Personal", "Personal", null, new { @class = "category" })%></li>
+                        
+                        <li class="navLink"><%: Html.ActionLink("About", "About", null, new { @class = "category" })%></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="divMain">
+
+            <div id="divMainContent">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+        
+        </div>
+        <div id="divFooter"><span>Copyright ©2015 Timothy Shivers Photography - <a href="mailto:tshivers@bu.edu">tshivers@bu.edu</a></span></div>
+    </div>
+     <%: Html.Hidden("hidRetina", "") %>
+</body>
+</html>

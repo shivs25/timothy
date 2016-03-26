@@ -1,0 +1,98 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="<%=Url.Content("~/Content/Site.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~/Content/Main.css") %>" rel="stylesheet" type="text/css" />
+    <link href="<%=Url.Content("~/Content/Timmy.css") %>" rel="stylesheet" type="text/css" />
+
+    <script src="<%=Url.Content("~/Scripts/jquery-1.10.2.min.js") %>" type="text/javascript"></script>
+
+    
+
+    <script type="text/javascript">
+        $(function() {
+            
+            var retina = window.devicePixelRatio > 1;
+            $("#hidRetina").val(retina);
+
+            if ("1" == $("#hidShowBackground").val()) {
+                $("html").addClass("fullScreenBackground");
+                
+                
+                if (retina) {
+                    $("html").addClass("fullScreenBackgroundImage-227");
+                    
+                }
+                else {
+                    $("html").addClass("fullScreenBackgroundImage");
+                }
+                 
+            }
+
+            $("#divSideBar").addClass($("#hidSideBarTheme").val());
+
+           
+            $("#divSideBar").addClass($("#hidSideBarLinksTheme").val());
+            $("#divFooter").addClass($("#hidFooterTheme").val());
+
+            $(".markRetina a").click(function() {
+                this.href = this.href + "&isRetina=" + retina;
+            });
+        });
+    </script>
+</head>
+
+<body>
+    
+    <div id="divMain">
+        
+        
+        <div id="divContentContainer">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        
+        
+    </div>
+    <div id="divSideBar">
+        <div id="divSideBarContainer">
+            <div id="divSideHeader">
+               <h2><%: Html.ActionLink("Timothy Shivers", "Index") %></h2>
+            </div>
+            <div id="divLinksContainer">
+                <ol>
+                    <% if (ViewData["PORTFOLIO"].ToString().ToLower() == "true") {
+                        %>
+                            <li class="markRetina"><%: Html.ActionLink("Portfolio", "Gallery", new { galleryId = "0", folderName = "Portfolio" }, new { title = "Portfolio" }) %></li>
+                    <% } %>
+                    <li class="markRetina"><span>Features</span>
+                    
+                        <ol>
+                            <% foreach (var l in (List<timothy.Models.Link>)ViewData["Links"]) {
+                           
+                                %>
+                                <li class="markRetina"><%: Html.ActionLink(l.Text, "Gallery", new { galleryId = l.URL, folderName = l.Text }, new { title = l.ToolTip })%></li>
+                            <% } %>
+                        </ol>
+                    </li>
+                    <li><%: Html.ActionLink("About", "About") %></li>
+                </ol>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="divFooter">
+        <span>Copyright ©2014 Timothy Shivers Photography - <a href="mailto:tshivers@bu.edu">tshivers@bu.edu</a></span>
+    </div>
+
+    <%: Html.Hidden("hidShowBackground", null != ViewData["ShowBackground"] ? ("true" == ViewData["ShowBackground"].ToString().ToLower() ? "1" : "0") : "0") %>
+    <%: Html.Hidden("hidSideBarTheme", null != ViewData["SideBarTheme"] ? ViewData["SideBarTheme"].ToString() : "noImageTheme")%>
+    <%: Html.Hidden("hidSideBarLinksTheme", null != ViewData["SideBarLinksTheme"] ? ViewData["SideBarLinksTheme"] : "darkLinks")%>
+    <%: Html.Hidden("hidFooterTheme", null != ViewData["FooterTheme"] ? ViewData["FooterTheme"] : "#darkFooter")%>
+    <%: Html.Hidden("hidRetina", "") %>
+    
+</body>
+</html>
